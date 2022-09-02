@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>render函数</title>
+</head>
+
+<body>
+  <script>
+    // render最原始写的方式
+    // render是个函数，还能接收到参数a
+    // 这个 createElement 很关键，是个回调函数
+    new Vue({
+      render(createElement) {
+        console.log(typeof createElement);
+        // 这个 createElement 回调函数能创建元素
+        // 因为残缺的vue 不能解析 template，所以render就来帮忙解决这个问题
+        // createElement 能创建具体的元素
+        return createElement('h1', 'hello')
+      }
+    }).$mount('#app')
+    // 简写形式
+    // render最原始写的方式
+    // render是个函数，还能接收到参数a
+    // 这个 createElement 很关键，是个回调函数
+    new Vue({
+      // render: h => h(App),
+      render: createElement => createElement('h1', 'hello')
+    }).$mount('#app')
+
+  </script>
+</body>
+
+</html>

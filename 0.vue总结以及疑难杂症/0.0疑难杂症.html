@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>各种BUG</title>
+</head>
+
+<body>
+  <script>
+    // 一.异步传值
+    // 一.父传子（父组件数据是异步的，子组件在mounted钩子中无法获取）解决
+    // 第一种：在父组件中解决
+    // 解：对父组件里面嵌套的子组件使用v -if，等父组件的数据获取完毕在渲染子组件
+    // 第二种： 在子组件中解决
+    // 解：子组件使用watch监听父组件传递过来的数据，把监听的新值重新复制给data变量
+  </script>
+</body>
+
+</html>
